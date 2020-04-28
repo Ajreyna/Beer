@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Beer"
+    }
+  },
+  "defaultProject": "Beer",
+  "cli": {
+    "analytics": false
+  }
 }
