@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {IBeer} from '../interfaces./IBeer';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +12,16 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  async get(){
-    return this.httpClient.get<IBeer>(this.BEER_URL).toPromise();
+    async getBeers(){
+      //return this.httpClient.get<IBeer>(this.BEER_URL).toPromise();
+      return await this.httpClient.get<IBeer[]>(this.BEER_URL).toPromise();
 
+      // getBeer(): Observable<IBeer[]>{
+    //   return this.httpClient.get<IBeer[]>(this.BEER_URL);
+    }
+    async getCount(path) {
+      return await this.httpClient.get<IBeer[]>(this.BEER_URL + path).toPromise();
+    }
   }
 
-}
+
