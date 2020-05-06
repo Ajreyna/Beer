@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort} from '@angular/material/sort';
 import { MatPaginator} from '@angular/material/paginator';
-import {IBeer} from '../interfaces./IBeer';
+import {IBeer} from '../interfaces/IBeer';
 import {DataService} from '../services/data.service';
 import {MatFormField} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';

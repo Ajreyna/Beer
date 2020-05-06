@@ -3,7 +3,7 @@ import { HttpClient} from '@angular/common/http';
 import { async } from '@angular/core/testing';
 import {ApiService} from './api.service';
 import { getLocaleNumberSymbol } from '@angular/common';
-import { IBeer } from '../interfaces./IBeer';
+import { IBeer } from '../interfaces/IBeer';
 import { DateAdapter } from '@angular/material/core';
 
 @Injectable({
